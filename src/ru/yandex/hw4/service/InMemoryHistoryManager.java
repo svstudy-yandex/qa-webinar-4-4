@@ -2,10 +2,14 @@ package ru.yandex.hw4.service;
 
 import ru.yandex.hw4.model.Task;
 
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 
 public class InMemoryHistoryManager implements HistoryManager {
-    // first, last
+    //private HashMap<Integer, Node> nodeMap;
+    private Node first;
+    private Node last;
 
     @Override
     public List<Task> getHistory() {
@@ -32,7 +36,7 @@ public class InMemoryHistoryManager implements HistoryManager {
 
     private void removeNode(Node node) {
         // удаляет node из списка (самый сложный метод)
-        // учесть 3 случая (node в начале, в середине и в конце), иначе будут NullPointerException
+        // учесть 4 случая (node в начале, в середине, в конце, пусто), иначе будут NullPointerException
         //...
     }
 
